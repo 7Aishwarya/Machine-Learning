@@ -1,3 +1,4 @@
 Data preprocessing is a crusial step for any machine learning module. 
 Without data preprocessing machine learning module will not work properly.
 This part contains data preprocessing template for both python and R
+You need to store these .py and .R files in the same directory where .csv file is stored and set the working directory in both python and R. 

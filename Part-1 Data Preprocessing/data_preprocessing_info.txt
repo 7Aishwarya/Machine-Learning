@@ -1,0 +1,3 @@
+Data preprocessing is a crusial step for any machine learning module. 
+Without data preprocessing machine learning module will not work properly.
+This part contains data preprocessing template for both python and R

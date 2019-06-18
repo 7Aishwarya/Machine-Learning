@@ -1,0 +1,13 @@
+# fitting simple linear regression on to the training set
+We create a machine that is a regressor here(simple linear regressor). And we make this machine learn on the training set 
+to understand the corelation between the experience and the salary so that this machine based on learning experience can 
+then predict the salary w.r.t the experience.
+
+# Predicting the test set results
+we create a vector that will contain the predictions of test salaries and we will put all these predicted salaries into 
+a single vector(y_pred)
+y_pred: vector of predictions for dependent variable <- this will be same for all the machine learning models(that we will create).
+
+# visualizing the test set results
+predictions of the test set so thta we can make new pedictions with some new employees having other years of experience and 
+that would give us great prediction of salary even if it was not in the original set.

@@ -1,0 +1,14 @@
+Suppose you have a data set that contains two columns of a new company:
+1. years of experience
+2. salary
+They have been setting the salary randomly so far based on higher the experience higher the salay.
+Now as a data scientist you have to find a corelation between the salary and years of experience.
+And then create a simple linear regression model that will tell which is the best fitting line for this relationship.
+This will help to set future salaries precisely.
+
+Simple linear regression is a statistical method that allows us to summarize and study relationships between two continous variables:
+-> one variable denoted as x, is regarded as the predictor or independent variable.
+-> other valiable denoted as y, is regarded as the response or dependent variable.
+Following formula is used:
+y = mx + c
+m:slope, c:constant

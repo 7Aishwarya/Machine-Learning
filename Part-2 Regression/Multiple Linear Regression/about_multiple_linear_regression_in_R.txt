@@ -1,0 +1,29 @@
+#fitting multiple linear regression to the training set
+We first introduce the multiple linear regressor. We fit it to the training se and then apply predict function on it 
+to make predictions of new observations(like test set observations)
+for this lm() function is used
+regressor = lm(formula = Profit ~ .)
+or 
+regressor lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State)
+
+In console when you type summary reressor you will see State2 and State3. these are dummy variables.
+Pr(>|t|) :Pvalue
+***      :SL(Significance Value)
+Less the Pvalue, mor statistically the independent variable will be.
+=> Lower the Pvalue higher the effect on independent variable
+(Here we are using 5% of Pvalue)
+On observing the output of summary(regressorwe see that here R.D.spend has only strong effect on the profit.
+
+This information is highly important for the investors because now they know that they should not only be looking 
+at the profit itself to decide where to invest but it should also look at R.D.spend
+
+Thus R.D.spend is the only strong predictor therefore we can rewrite the multiple linear regression equation and 
+turn it into simple linear regression equation.
+regressor lm(formula = Profit ~ R.D.Spend)
+
+
+#Bulilding the optimal model using backward elimination
+Find a team of independent variables so that each independent variable of the team has great impact on the 
+dependent variable, i.e profit. This effect can be positive or negative.
+The principle of backward elimination is that we will remove each variable that is statistically not significant
+one by one.

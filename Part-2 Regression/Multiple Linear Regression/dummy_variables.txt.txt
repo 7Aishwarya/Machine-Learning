@@ -1,0 +1,42 @@
+DUMMY VARIABLES
+
+The challange is that the venture capitalist fund wants to see if there is any corelation between profit and the amount that are spent
+on different expenses: R&D spend, Administration, marketing and also in which state the company operates.
+
+We have to bulid a linear regression.
+We start with 
+y=b0 + b1*x1 + b2*x2 + b3*x3 + ??
+(state is a categorical data therefore it cannot be added to the equation)
+x1, x2 and x3 are numeric variables.
+
+Thus whenever you face categorical variable then you need to create dummy variable.
+
+We find all the different categories and for each category create a new column and use 1 or 0 to fill the column 
+
+Profit      R&D      Spend      Admin      Marketing      State      New York      California
+                                                          New York       1             0
+                                                          California     0             1
+                                                          California     0             1
+                                                          New York       1             0
+                                                          California     0             1
+Now ,
+y=y=b0 + b1*x1 + b2*x2 + b3*x3 + b4*D4
+
+This fifth term is for New York. State and California are not included. 
+You can never include both dummy variables at the same time. All the data is preserved only if we stick to New York column.
+
+The coefficient for California is going to be included in the constant(b0) and by default when D1=0, this whole equation will
+turn into an equation for California. When D1=1 then it means that it is for New York.
+
+
+
+DUMMY VARIABLE TRAP
+
+If we use second dummy variable also that would mean that we are duplicating a variable because: D2 = 1 - D1
+y=y=b0 + b1*x1 + b2*x2 + b3*x3 + b4*D4 + b5*D2
+
+The phenomena where one or several independent variables in a linear regression predict another is called 
+multiple linearity. As a result of this effect the model cannot distinguish between the facts of D1 from the 
+facts of D2 and therefore it won't work properly and this is called the dummy variable trap.
+  
+                                         

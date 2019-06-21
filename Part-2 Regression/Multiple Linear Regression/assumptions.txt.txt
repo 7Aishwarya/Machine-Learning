@@ -1,0 +1,11 @@
+Assumptions of linear regression
+1. Linearity - This means that the mean of the dependent variable is a linear combination of the parameters(regression coefficients) 
+   and the predictor variables
+2. Homoscedasticity - Homoscedasticity means same variance. 
+   Random disturbance in the relationship between the independent variables and dependent variables is the same across all values of 
+   the independent variables.
+3. Multivariate Normality - Multiple regression assumes that the residulas are normally distributred.
+4. Independence of Errirs - This means that the distribution of errors is random and not influenced by or correlated to the errors in 
+   prior observations.   
+5. Lack of Multicollinearity - It is a phenomena in which one predictor variable in a multiple regression model can be linearly predicted
+   from the others with a substantial degree of accuracy.

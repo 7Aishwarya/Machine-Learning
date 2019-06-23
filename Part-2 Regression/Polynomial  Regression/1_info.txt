@@ -1,0 +1,21 @@
+Simple Linear Regression
+y = b0 + b1*x1 
+Multiple Linear Regression
+y = b0 + b1*x1 + b2*x2 + .... + bn*xn
+Polynomial Linear Regression
+y = b0 + b1*x1 + b2*x1^2 + .... + bn*x1^n
+
+We are a human resource team for a big company and we are about to hire a new employee in the company. 
+We have to negotiate the new salary for this employee. He is telling he has had 20+ years of experience 
+and earned $160K annual salary in his previous company. HR team wants to find out if this information 
+given by him is true or not. But unfortunately they manage to get this info only:
+positions, their corresponding levels and salary.
+They also manage to find that this person who is about to be hired has been a region manager(level 6) 
+for 2 years. And it takes 4 years to become a partner(level 7) from a region manager. So according to 
+the dataset this person was at level 6.5
+
+Now, as a data scientist we have to build a bluffing detective using regression models to predict if 
+this new employee is bluffing about his salary or telling the truth.
+
+We will use polynomial regression to bulid a bluffing detector.
+   

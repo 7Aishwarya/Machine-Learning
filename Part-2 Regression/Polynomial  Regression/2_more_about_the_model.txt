@@ -1,0 +1,72 @@
+Machine is the polynomial regression model itself and learning is related to the fact that this polynomial regression machine learning model
+will learn the co-relation between the levels here and salary to predict any new salary corresponding to any new level, for e.g we want to 
+predict salary for level 6.5
+
+We will include only two columns in our dataset, i.e level and salary
+We will not include position as it is equivalent to level column.
+***********************************************************************************************************************************************
+#splitting is not reguired because we have small dataset only
+
+#Feature scaling is not required because polynomial regression is actually a multiple regression model with polynomial terms.
+Instead of having different features we are using first feature which is the levels from 1 to 10. And other independent variable 
+which we will be using are squares and other exponents of these leves here.
+***********************************************************************************************************************************************
+We start by creating regressors: linear regressor and polynomial regressor.  
+#Fitting linear regression to the dataset
+Level has 2 stars therefore not a bad predictor 
+
+#Fitting polynomial regression to the dataset
+we have to add polynomial features which are actually some independent variables, i.e the level squared, level cubed, 
+level to the fourth , fifth and any degree we want.
+These additional independent variables that are going to compose our new matrix features in some way, which are actually the 
+matrix on which we apply a multiple linear regression model which will make the whole model a polynomial regression model.
+
+Now we have to build these polynomial terms. For this we add a new column to the dataset which will be level squared.
+To add a column in a dataframewe have to take a dataframe.
+dataset$Level2 = dataset$Level^2  
+dataset$Level3 = dataset$Level^3
+dataset$Level4 = dataset$Level^4
+poly_reg = lm(formula = Salary ~ ., data = datset)
+When we execute summary(poly_reg) then we see that level2 and level3 are satistically significant. But this table does not solve our problem.
+**********************************************************************************************************************************************
+#Visualizing the linear regression results
+Go to packages->check if ggplot2npackage is there or not. If it's not then type:
+install.packages('ggplot2') 
+once you execute it you can put this in comment
+library(ggplot2) #to slect the package
+Now, we start buildinf the plot. We will use ggplot() function and then add different components in the graph:
+
+geom_point(aes(x=dataset$Level, y=dataset$Salary), colour='red')
+ # adds real observation points
+   aes() is function that will input x_coordinates of our observations point as well as y_coordinates
+
+geom_line(x=dataset$Level, y=predict(lin_reg, newdata=dataset), colour='blue')
+ # prediction points function i.e plots prediction line
+   In predictor() we first have to specify the regressor, i.e lin_reg hereand second argument, 
+   i.e newdata = dataset because we want to get the predictions of the salaries of 10 levels of our dataset
+
+ggtitle: to add title to the plot
+x_lab: label for the x-axis
+y_lab: label for the y-axis
+
+The line of predictions does not fit the real observations 
+6.5 level corresponds to 300k according to the graph
+  
+#Visulaizing the polynomial regression results
+from the graph we see that 6.5 gives around 160K salary
+
+So, we are going to use this model to solve our problem
+********************************************************************************************************************************************
+#predicting a new result with linear regression
+this time we are going to make a single prediction
+y_pred=predict(lin_reg, data.frame(Level=6.5))
+Earlier y_pred was a vector, now it is a single value 
+we need to create a new dataframe containing 6.5 value tospecify to the newdata
+ 
+#predicting a new result with polynomial regression
+6.5 -> 158K
+
+He said 160K which is very near to our prediction 
+
+*********************Thus the final verdict is truth*************************************
+ 

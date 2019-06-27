@@ -1,0 +1,5 @@
+about SVR:
+https://medium.com/coinmonks/support-vector-regression-or-svr-8eb3acf6d0ff
+
+about high dimensional data:
+https://www.quora.com/What-do-we-mean-by-high-dimensional-data

@@ -1,0 +1,25 @@
+details about the model:
+
+we use our regression template here
+
+#no need of splitting , no need of feature scaling
+
+#when we execute the predict part we get a straight line
+(But here it is not because we did not apply feature scaling)
+ 
+(For R only) The problem here is related to the number of splits because the way decision tree regression model 
+is made is that it is making splits based on different conditions so more conditions you have in your 
+independent variables the more you have splits and here cleary we have no slpit.
+So, we will add a parameter, 'control' to the rpart() to set the condition on the splits.
+ 
+# execute visualise part  
+(For both R and python)
+According to the decision tree algorithm by considering the entropy in the information gain, it's splitting the 
+independent variable into several intervals.
+Here the algo will only take intervals of the independent variable. for example, it was taking the average in each
+interval so if it is taking the average then the graph is not correct.
+
+The problem is nonlinear non continuous regression model.
+
+Therefore now we take the code which visualizes our regression model in higher resolution.
+Increase the resolution. then we can clearly see what the decision are.  

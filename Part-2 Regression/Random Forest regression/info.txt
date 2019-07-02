@@ -1,0 +1,14 @@
+Random Forest Regression is a version of ‘Ensemble Learning’
+
+Ensemble Learning is when you take multiple algorithms or same algorithms multiple times and put them together to make something much more powerful than the original.
+
+STEP 1 Pick at random ‘k’ data points from the training set.
+
+STEP 2 Build the Decision Tree associated to these ‘k’ data points.
+
+STEP 3 Choose the number Ntree of tress you want to build and repeat STEPS 1 & 2.
+
+STEP 4 For a new data point,make each one of your Ntree tress predict the value of y for the data point in question, and assign the new data point the average across all of the predicted y values.
+(means you are getting many predictions and then you take the average of those predictions).
+
+

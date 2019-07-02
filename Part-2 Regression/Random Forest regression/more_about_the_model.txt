@@ -1,0 +1,27 @@
+details about the model:
+
+we use our regression template here
+
+#no need of splitting , no need of feature scaling
+
+random forest might be combinations of regression models, therefore we take visulaizing(for higher resolution)
+
+#create regressor(for pyhorizontal thon)
+step1->create right class
+step2->create an object for this class which will be random forest regressor
+step3->fit random forest regressor to our dataset using fit method
+
+#create regressor(for R)
+step1->install the required package
+step2->import library
+step3->use function to build random forest regressor
+
+(for both python and R)
+increase resolution by reducing the step to 0.01
+We simply get more steps and stairs by having several decision trees instead of one, therefore we have lot more
+splits and therefore intervals. Each horizontal line separated by a vertical line is one interval, i.e one split.
+
+If  we add lot more trees in our random forest, it does not mean we will get more steps and the stairs because
+the more you add some trees the more the average of the different predictions made by the trees is converting 
+the same avg.
+This is based on the same technique, entropy and the information gain.

@@ -1,0 +1,41 @@
+#logistic regression
+Here the dataset contains informationabout users of social network, i.e userID , genderr, age and estimated salary.
+And this social network contains many business clients which can put their adds on social network and one of the 
+client is in a car company who have just launced their brand new SUV for a ridiculuous price and wee are trying to 
+see which of these users of social network are going to buy this brand new SUV.
+Last column tells if YES or NO the user bought this SUV or not.
+
+We are going to build a model that is going to predict if a user is going to predict if a user is going to buy the SUV 
+or not based on 2 variables which is their age and estimated salary.
+So, these 2 columns will be the metrix of features. We want to find some co-relation between age, estimated salary and 
+decision to purchase or not.
+
+#feature scaling is required because we want accurate prediction
+
+#fitting logistic regression to the training set
+since the logistic regression is a linear classifier and we are in 2-Dimension, thus our 2 categories will be separated 
+by a straight line.
+
+#making confusion matrix
+this contains the correct predictions as well as the incorrect predictions that our model made on the test set 
+
+#visualizing the training set results
+green points - for users who bought the SUV
+red points - for users who did not buy the SUV
+
+GOAL OF CLASSIFICATION:
+Classify the right users in the right category, i.e we are making classifier that will catch right users into the right catogory.
+There are two regions;
+red region - where classifier catches the users who don't buy the SUV
+green region - where classifier catches the users who buy the SUV 
+
+Classifier decides on the basis of age and estimated salary.
+Our classifier prdicts most of the points for users who bought and who did not buy the SUV . But we have spme red points in the 
+green region and some green points in the red region.
+These incorrect predictions are specifically due to the fact that our classifier is a linear classifier and our users 
+are not linearly distributed. If they were linearly distributed then we would have got all the red points in the red region and  
+all the green points in the green region. And the linear classifier with a straight line could perfectly separate all the red 
+and green points. Even if we rotate the line then also it will not work.
+
+We need to make some curve here in the line to classify correctly. 
+   

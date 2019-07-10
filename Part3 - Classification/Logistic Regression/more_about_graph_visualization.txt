@@ -1,0 +1,8 @@
+#visualizing 
+we took all the pixels with 0.01 resolution points of this framework and we apply classifier on it.
+Each of the pixel points is the user of the social network with a salary and age.
+So, for each of these new pixel points these new pixel observation points we apply logistic regression model
+to predict if this pixel point has value 0 or 1. If the classifier predicts 0, it's going to colorize the pixel 
+point red and if it is 1, it is going to colorize it in green.
+
+

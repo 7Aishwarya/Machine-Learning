@@ -1,0 +1,32 @@
+Imagine a scenario where we have 2 categories present in our dataset.
+
+Now, say we are adding a new point to our dataset. The question is it should lie in which category?
+How do we classify this new datapoint?
+-> Here K-NN Algorithm is used.
+
+How did it do that?
+
+STEP1 -> choose the number k of neighbours
+
+STEP2 -> take the k nearest neighbours of the new data point, according to the Euclidean distance.
+
+STEP3 -> among these k neighbours, count the number of data points in each category.
+
+STEP4 -> Assign the new data point to the category where you counted the most neighbours.
+
+Your model is ready.
+
+
+#visualizing 
+The boundaryin the graph looks like boundary of some state or country. It's because it is based on finding the k closest neighbours 
+each time so prediction boundary for the k is most of the times going to look like that.
+And compared to logistic regression we can see that this class is much better as it classifies the users into 
+their right category as we can see in the graph red points are in the red region while green points are in the green region.
+
+In logistic regression we had a straight line so it could not classify correctly all those green users that correspond to users with 
+the age above the average and salary below the average but who bought the SUV, the logistic regression could not catch these users 
+in the right category because it was linear.
+
+Besides, we have some wrong predictions because this model did not fit to our model too well. Yet it was a good model.  
+
+ 

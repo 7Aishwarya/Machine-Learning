@@ -1,0 +1,2 @@
+to know more about regularization go to the following link
+https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a

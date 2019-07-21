@@ -1,0 +1,38 @@
+Let's first understand the dataset.
+There is a big mall in a specific city that contains information of its clients. The clients that subscribe
+to the membership card. When the client subscribe to the card they provided their information like their
+gender, age and their annual income. And because they have this card they use it to buy all sorts of things 
+in the mall. And therefore the mall has the purchase history of each of it's client member.
+And that's how they obtained the last column which is a spending score.
+
+Spending score is a score of the amount computed for each of their clients based on several criteria including 
+their income, the number of times per week they show up in the mall and the amount of dollars they spent in a 
+year. And based on all this metric is computed that takes values between 1 and 100.
+close to 1 -> spends less
+close to 100 -> spends more
+
+And eventually after collecting this data set, the company hired you as a machine learning scientist to segment 
+their clients in two different groups based on these two metrics, the annual income and the spending score. 
+
+And since the mall has no idea of what this client segments might be or even has no idea about how many segments 
+there would be so this is typically a clustering problem because we don't know the answers.
+
+
+
+For R
+
+# set.seed(6)
+Since there are random factors in k-means, we can obtain slightly differnt results by using k-means several times 
+so in order to grt same result we set the same seed. 
+
+# wcss <- vector()
+we use for loop to compute some different within plus the sum of squares for different numbers of clusters and 
+we are going to place the different within clusters sum of squares in a vector. 
+So, we start by initializing the vector 
+
+# for(i in 1:10 sum(kmeans(X,i)$.....)
+we use for loop to populate with the different within cluster sum of squares
+1:10 => 1 to 10 included
+kmeans() => to fit the k-means algorithm to our dataset with i clusters  
+
+  

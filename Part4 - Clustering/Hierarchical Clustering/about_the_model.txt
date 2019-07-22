@@ -1,0 +1,40 @@
+the data set is same as we had in k-means clustering algorithm
+
+##### for python
+
+# spicy
+it is an open source python library that contains tools for hierrarchial clustering and building dendrograms
+tools - cluster.hierarchy
+# sch.linkage
+linkage is itself an algorithm o hierarchy clustering
+In linkage we specify on which data we apply the linkage
+
+# method = 'ward'
+this tries to minize the variance within each cluster
+
+# hc = AgglomerativeClustering(n_cluster = 5, affinity = 'euclidean', linkage = 'ward')
+hc is an object of AgglomerativeClustering class
+affinity gives the distance to the linkage
+
+# y_hc = hc.fit_predict(X)
+y_hc is a vector
+fit_predict not only fits agglomerative clustering to our data X but also creates a vector ofclusters that 
+returns for each cluster that which cluster the customer belongs to
+
+# visualizing
+here visualizing is for only 2 - dimensions
+when we map higher dimensions to 2 - dimensions then only we can use this step of visualizing our dataset
+
+
+##### for R
+
+# dendrogram = hclust(dist(X, method = 'euclidean'), method = 'ward.D')
+dendrogram here is a variable
+hclust is a class
+hierarchial cluster analysis on a set of dissimilarities and methods for analyzing it 
+
+y_hc = cutree(hc, 5
+y_hc is a vector of clusters that tells which cluster each customer belongs to
+cutree is a method for this
+
+

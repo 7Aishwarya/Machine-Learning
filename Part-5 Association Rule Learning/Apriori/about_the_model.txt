@@ -1,0 +1,79 @@
+# about the dataset
+There are 7500 observations, 20 variables
+
+
+
+############ For R ########################
+
+# header = FALSE
+to indicate that the first line of our data set does not contain titles of the columns
+
+We are making this apriori model for a store and we want to ind out the association rules of the different products of the store
+to see how the manager of the store can optimize the placement of its different products to optimize the sales. 
+
+The manager of the store noticed and calculated that on an average each customer goes and buys at the store once a week.
+
+package used - 'arules' package
+it does not use dataset like we have, it uses sparse matrix as input (matrix that contains lots of zeros)
+So, we convert our dataset to sparse matrix.
+
+120 columns for 120 products
+rows correspond to the transactions of 7500 customers 
+0 -> if product is not there
+1 -> i product is there
+
+# rm.duplicates = TRUE 
+to remove duplicates
+
+# sep = ','
+different products are seperated by a comma when you open a text editor
+
+# summary(dataset)
+
+frequency plot of the different products bought by the different customers in the store during this whole week. To get this plot 
+easily we use one of the function itemFrequencyPlot() of the 'arules' package
+
+# itemFrequencyPlot(dataset, topN = 10)
+topN - number of most sold products you want to have in this frequency plot
+
+# training apriori on the dataset
+we have to set a minimum support. We are going to consider a product that is purchased 3 or 4 times a day and tehn by associating 
+them and placing them together customers are more likely to purchase these products. Therefore the sales will increase and that will  
+be the starting point of how we are going to set our minimum support.
+And if we are not convinced by the rules we'll change this value of the support, that's how we work with the apriori model.
+We try different values of support and confidence until we get the strongest rules that optimizes the sales.
+
+if a product is purchased 3 times a day, it means it is bought 3*7=21 times a week
+and since support = no. of transactions of this product / total no. of transactions
+          support = (3*7) / 7500 = 0.003
+
+choice of support depends on business problem but mostly on business goals so we are going to start with the default value of confidence
+and then decrease the confidence step by step untill we get some relevant rules.
+
+if confidence:
+too high -> obvious rules
+too low -> nonsense rules
+therefore it should not be too high and not too low
+
+# visualizing the results
+lift is the best metric to measure the relevance of the rules that is why we are sorting the rules that is why we are sorting the rules 
+by their confidence or support
+-> inspect() used for ths purpose
+
+# inspect(rules[1:10])
+this will give only the irst 10 rules found by our apriori model (and not the 10 rules having the highest lift). Therefore we sort.
+
+
+
+############## For Python #######################
+
+# min_confidence = 0.2
+all the rules we have must be true atleast 20% of the times
+
+=> Here the rules found by the apriori algorithm are already sortedby their relevance . So, relevance is not the lift, it's actually the 
+combination of support, confidence and the lift.
+
+
+we are going to import apriory function from this python file(that contains classes and functions) instead of importing some classes and 
+functions from an open source library.
+ 
